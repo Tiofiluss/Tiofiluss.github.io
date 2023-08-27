@@ -169,7 +169,6 @@ label .close-btn {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  display: none;
 }
 
 #check:checked ~ header .navigation a {

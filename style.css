@@ -178,6 +178,10 @@ label .close-btn {
   letter-spacing: 2px;
 }
 
+#check {
+  display: none;
+}
+
 #check:checked ~ header label .menu-btn {
   display: none;
 }

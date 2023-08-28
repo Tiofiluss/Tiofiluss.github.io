@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-@media only screen and (max-width: 768px) {
-  html body {
-    width: 100%;
-    overflow-x: hidden;
-  }
+html,
+body{
+  width:100;
+  overflow-x:hidden;
 }
+
 
 * {
   margin: 0;

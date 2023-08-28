@@ -14,7 +14,8 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: url(bgk.png) no-repeat;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   background-size: cover;
   background-position: center;
 }
@@ -50,6 +51,25 @@ header .navigation a {
   transition-property: color;
 }
 
+nav a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 100;
+  margin-left: 35px;
+  text-align: right;
+  transition: 0.3s;
+  transition-property: color;
+}
+
+.navigation a:hover {
+  color: #fff;
+}
+
+.navigation a.active {
+  color: #00ffba;
+}
+
 header .navigation a:not(:last-child) {
   margin-right: 30 px;
 }
@@ -64,13 +84,15 @@ header.navigation a:hover {
 }
 
 .content .info h2 {
-  color: #1d9299;
+  color: #004dff;
+  width: 80vw;
   font-size: 55px;
-  text-transform: uppercase;
+  margin: 0 auto;
+  text-transform: none;
   font-weight: 800;
   letter-spacing: 2px;
   line-height: 60px;
-  margin-bottom: 30px;
+  text-align: center;
 }
 
 .content .info h2 span {
@@ -83,11 +105,17 @@ header.navigation a:hover {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 40px;
+  margin: 0 auto;
+  width: 80vw;
+  text-align: center;
 }
 
 .content .info-btn {
   color: #fff;
-  background: #1d9299;
+  margin: 0 auto;
+  width: 100vw;
+  text-align: center;
+  background: #2a66f1;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -98,8 +126,16 @@ header.navigation a:hover {
   transition-property: color;
 }
 
-.content .info-btn:hover {
-  color: #ffffff;
+.button {
+  width: 80vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.info-btn:hover {
+  background: #ffffff;
+  color: #333;
 }
 
 .media-icons {
@@ -239,4 +275,28 @@ header .logo {
 
 .content .info p {
   font-size: 14px;
+}
+
+.navbrand {
+  font-family: "Slackside One", sans-serif;
+  position: relative;
+  margin: 15px;
+  margin-left: 50px;
+  width: 300px;
+  float: left;
+}
+
+.navbrand img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  float: left;
+}
+
+.navbrand {
+  margin-left: 40px;
+  color: white;
+  float: left;
+  font-size: 20px;
 }

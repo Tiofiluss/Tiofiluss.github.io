@@ -232,7 +232,7 @@ label {
   }
 }
 
-@media screen and (max-width: 476px) {
+@media screen and (max-width: 865px) {
   .content .info h2 {
     width: 100%;
   }

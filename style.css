@@ -137,7 +137,7 @@ header.navigation a:hover {
   letter-spacing: 2px;
   line-height: 60px;
   text-align: center;
-  width: 85vw;
+  width: 80vw;
   justify-content: center;
   display: grid;
   line-height: 1024px;
@@ -159,7 +159,7 @@ header.navigation a:hover {
   margin: 0 auto;
   width: auto;
   text-align: center;
-  width: 85vw;
+  width: 80vw;
   position: relative;
 }
 
@@ -177,7 +177,7 @@ header.navigation a:hover {
   transition: 0.3s;
   transition-property: color;
   width: max-content;
-  width: 85vw;
+  width: 80vw;
 }
 
 .button {
@@ -185,7 +185,7 @@ header.navigation a:hover {
   text-align: center;
   margin: 0;
   margin-top: 20px;
-  width: 85vw;
+  width: 80vw;
 }
 
 .info-btn:hover {
@@ -206,6 +206,7 @@ header.navigation a:hover {
   font-size: 25px;
   transition: 0.3s;
   transition-property: transform;
+  text-align: center;
 }
 
 .media-icons a:not(:last-child) {

@@ -1,89 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <tittle>Weather App - Tiofilus</tittle>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content=" width=device-width, intial-scale=1.0" />
+    <title>Tio Website</title>
+    <link rel="stylesheet" href="style.css" display:none; />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
   <body>
-    <div class="card">
-      <div class="search">
-        <input type="text" placeholder="enter city name" spellcheck="false" />
-        <button><img src="images/search.png" /></button>
-      </div>
-      <div class="error">
-        <p>Invalid city name</p>
-      </div>
+    <section id="home">
+      <input type="checkbox" id="check" />
+      <header>
+        <div class="navbrand">
+          <img src="naruto.gif" class="w-200" />
+          <h1>Tiofiluss</h1>
+        </div>
 
-      <div class="weather">
-        <img src="images/rain.png" class="weather-icon" />
-        <h1 class="temp">29°C</h1>
-        <h2 class="city">Jakarta</h2>
-
-        <div class="details">
-          <div class="col">
-            <img src="images/humidity.png" />
-            <div>
-              <p class="humidity">61%</p>
-              <p>Humidity</p>
-            </div>
-            <div class="col">
-              <img src="images/wind.png" />
-              <div>
-                <p class="wind">11 km/h</p>
-                <p>Wind Speed</p>
-              </div>
-            </div>
+        <div class="navigation">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#info">Info</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <label for="check">
+          <i class="fa-solid fa-bars menu-btn"></i>
+          <i class="fa-solid fa-xmark close-btn"></i>
+        </label>
+      </header>
+      <div class="content">
+        <div class="info">
+          <h2>Hello! <br /><span>My Name Is Tio</span></h2>
+          <p>Welcome to Tio Website.</p>
+          <div class="button">
+            <a href="#about" class="info-btn">More Info</a>
           </div>
         </div>
       </div>
+
+      <div class="media-icons">
+        <a href="https://www.instagram.com/tiofilus007/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/channel/UCfovEYQdh83E1JeBb5Qlu4w/"
+          target="_blank"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="https://github.com/Tiofiluss/" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </section>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Yo! My name is Tio, I live in Jakarta. I go to SMPN 255. Nice to meet
+        you! I have a hobby to play games (honestly).I also like coding (html
+        and css), playing music (a little) and singing (a little too).I have few
+        friends, but yes we should be grateful for that:). I'm quiet and listen
+        a lot. My favorite subject in school is Math, but sometimes I hate it
+        too. I'm a beginner programmer (so sorry if it's a bit ugly). So, that's
+        probably it!
+      </p>
+    </section>
+        </div>
+      </div>
     </div>
-
-    <script>
-      const apiKey = "0b66f2a29aa95679535f15bf6cfd4c8e";
-      const apiUrl =
-        "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
-
-      const searchBox = document.querySelector(".search input");
-      const searchBtn = document.querySelector(".search button");
-      const weatherIcon = document.querySelector(".weather-icon");
-
-      async function checkWeather(city) {
-        const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-
-        if (response.status == 404) {
-          document.querySelector(".error").style.display = "block";
-          document.querySelector(".weather").style.display = "none";
-        } else {
-          var data = await response.json();
-
-          document.querySelector(".city").innerHTML = data.name;
-          document.querySelector(".temp").innerHTML =
-            Math.round(data.main.temp) + "°C";
-          document.querySelector(".humidity").innerHTML =
-            data.main.humidity + "%";
-          document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
-
-          if (data.weather[0].main == "Clouds") {
-            weatherIcon.src = "images/clouds.png";
-          } else if (data.weather[0].main == "Clear") {
-            weatherIcon.src = "images/clear.png";
-          } else if (data.weather[0].main == "Rain") {
-            weatherIcon.src = "images/rain.png";
-          } else if (data.weather[0].main == "Drizzle") {
-            weatherIcon.src = "images/drizzle.png";
-          } else if (data.weather[0].main == "Mist") {
-            weatherIcon.src = "images/mist.png";
-          }
-
-          document.querySelector(".weather").style.display = "block";
-          document.querySelector(".error").style.display = "none";
-        }
-      }
-
-      searchBtn.addEventListener("click", () => {
-        checkWeather(searchBox.value);
-      });
-    </script>
   </body>
 </html>

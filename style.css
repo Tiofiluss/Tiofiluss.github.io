@@ -1,108 +1,533 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
 * {
-  margin: 0;
-  padding: 0;
   font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 414px) {
+  .text {
+    visibility: collapse;
+  }
+
+  .phonetext {
+    visibility: visible;
+  }
+}
+
+.bleed-out {
+  width: 75vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-area {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
 }
 
 body {
-  background: #222;
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100svh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100%;
+  max-width: 100%;
+  scroll-behavior: smooth;
 }
 
-.card {
-  width: 90%;
-  max-width: 470px;
-  background: linear-gradient(135deg, #00feba, #5b548a);
-  color: #fff;
-  margin: 100px auto 0;
+html,
+body {
+  width: 100;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+#home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+#home.info h2 {
+  font-family: "Jam Grotesque", sans-serif;
+}
+
+#home .info p {
+  font-family: "Poppins", sans-serif;
+}
+
+#about {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #0093e9;
+  background-image: linear-gradient(20deg, #0093e9 0%, #80d0c7 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+#about h2 {
+  width: auto;
+  font-size: 45px;
+  margin: 0 auto;
+  text-transform: none;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 60px;
+  text-align: center;
+  width: 80vw;
+  justify-content: center;
+  display: grid;
+  line-height: 1024px;
+  place-content: center;
+  place-items: center;
+  display: grid;
+}
+
+#about p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  margin: 0 auto;
+  width: auto;
+  text-align: center;
+  width: 80vw;
+  position: relative;
+}
+
+header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  position: relative;
+  color: #000;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+header .navigation a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1 px;
+  padding: 2px 15px;
   border-radius: 20px;
-  padding: 40px 35px;
+  transition: 0.3s;
+  transition-property: color;
+}
+
+nav a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 100;
+  margin-left: 35px;
+  text-align: right;
+  transition: 0.3s;
+  transition-property: color;
+}
+
+.navigation a:hover {
+  color: #fff;
+}
+
+.navigation a.active {
+  color: #00ffba;
+}
+
+header .navigation a:not(:last-child) {
+  margin-right: 30 px;
+}
+
+header.navigation a:hover {
+  color: #fff;
+}
+
+.content {
+  max-width: 650px;
+  margin: 60px 100px;
+}
+
+.about {
+  max-width: 650px;
+  margin: 60px 100px;
+}
+
+.content .info h2 {
+  font-family: "Enriqueta", serif;
+  color: #fff;
+  width: auto;
+  font-size: 55px;
+  margin: 0 auto;
+  text-transform: none;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 60px;
+  text-align: center;
+  width: 80vw;
+  justify-content: center;
+  display: grid;
+  line-height: 1024px;
+  place-content: center;
+  place-items: center;
+  display: grid;
+}
+
+.content .info h2 span {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.content .info p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  margin: 0 auto;
+  width: auto;
+  text-align: center;
+  width: 80vw;
+  position: relative;
+}
+
+.content .info-btn {
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  background: #2a66f1;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+  transition-property: color;
+  width: max-content;
+  width: 80vw;
+}
+
+.button {
+  width: 80vw;
+  text-align: center;
+  margin: 0;
+  margin-top: 20px;
+  width: 80vw;
+}
+
+#about h2 {
+  font-size: 40px;
+  color: white;
+  position: relative;
+  margin: 0 auto;
+  width: 80vw;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#about p {
+  font-size: 20px;
+  color: white;
+  margin: 0;
+  width: auto;
+  position: relative;
+  text-align: center;
+  padding: 0;
+  align-items: center;
+}
+.info-btn:hover {
+  background: #ffffff;
+  color: #333;
+}
+
+.media-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.media-icons a {
+  position: relative;
+  color: #111;
+  font-size: 25px;
+  transition: 0.3s;
+  transition-property: transform;
   text-align: center;
 }
 
-.search {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.media-icons a:not(:last-child) {
+  margin-right: 60px;
 }
 
-.search input {
-  border: 0;
-  outline: 0;
-  background: #ebfffc;
-  color: #555;
-  padding: 10px 25px;
-  height: 60px;
-  border-radius: 30px;
-  flex: 1;
-  margin-right: 16px;
-  font-size: 18px;
+.media-icons a:hover {
+  transform: scale(1.5);
 }
 
-.search button {
-  border: 0;
-  outline: 0;
-  background: #ebfffc;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
+label {
+  display: none;
+}
+
+#check {
+  z-index: 3;
+}
+
+/* Responsive styles*/
+
+@media (max-width: 960px) {
+  header .navigation {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .content .info h2 {
+    width: 100%;
+  }
+  .content .info p {
+    width: 100%;
+  }
+  .content.info-btn {
+    width: 100%;
+  }
+  .button {
+    width: 100%;
+  }
+
+  #about h2 {
+    width: 100%;
+  }
+
+  #about p {
+    width: 100%;
+  }
+}
+
+label {
+  display: block;
+  font-size: 25px;
   cursor: pointer;
+  transition: 0.3s;
+  transition-property: color;
 }
 
-.search button img {
-  width: 16px;
+label:hover {
+  color: #fff;
 }
 
-.weather-icon {
-  width: 170px;
-  margin-top: 30px;
-}
-.weather h1 {
-  font-size: 80px;
-  font-weight: 500;
+label .close-btn {
+  display: none;
 }
 
-.weather h2 {
+#check:checked ~ header .navigation {
+  z-index: 2;
+  position: fixed;
+  background: rgba(23, 130, 136, 0.9);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#check:checked ~ header .navigation a {
+  font-weight: 700;
+  margin-right: 0;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ header label .menu-btn {
+  display: none;
+}
+
+#check:checked ~ header label .close-btn {
+  z-index: 2;
+  display: block;
+  position: fixed;
+}
+
+label .menu-btn {
+  position: absolute;
+}
+
+header .logo {
+  position: absolute;
+  bottom: -6px;
+}
+
+.content .info h2 {
   font-size: 45px;
-  font-weight: 400;
-  margin-top: -10px;
+  line-height: 50 px;
 }
 
-details {
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  margin-top: 50px;
-  justify-content: left;
+.content .info h2 {
+  font-size: 45px;
+  line-height: 50px;
 }
 
-.col {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  justify-content: space-between;
+.content .info h2 span {
+  font-size: 40px;
+  font-weight: 600;
 }
 
-.col img {
-  width: 40px;
-  margin-right: 10px;
-}
-
-.humidity,
-.wind {
-  font-size: 28px;
-  margin-top: -6px;
-}
-
-.weather {
-  display: none;
-}
-
-.error {
-  text-align: left;
-  margin-left: 10px;
+.content .info p {
   font-size: 14px;
-  margin-top: 10px;
-  display: none;
+}
+
+@media (min-width: 375px) {
+  .content .info h2 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  .content .info h2 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  .content .info h2 span {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .content .info p {
+    font-size: 14px;
+  }
+
+  #about h2 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  #about p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.navbrand {
+  font-family: "Slackside One", sans-serif;
+  position: relative;
+  margin: 15px;
+  margin-left: 50px;
+  width: 300px;
+  float: left;
+  width: left;
+}
+
+.navbrand img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  float: left;
+  width: left;
+}
+
+.navbrand {
+  margin-left: 40px;
+  color: white;
+  float: left;
+  font-size: 20px;
+  width: left;
+}
+
+@media (max-width: 860px) {
+  .content .info h2 {
+    font-size: 45px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  .content .info h2 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  .content .info h2 span {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .content .info p {
+    font-size: 14px;
+  }
+
+  #about h2 {
+    font-size: 45px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  #about p {
+    font-size: 14px;
+  }
+}
+
+.navbrand {
+  font-family: "Slackside One", sans-serif;
+  position: relative;
+  margin: 15px;
+  margin-left: 50px;
+  width: 300px;
+  float: left;
+  width: left;
+}
+
+.navbrand img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  float: left;
+  width: left;
+}
+
+.navbrand {
+  margin-left: 40px;
+  color: white;
+  float: left;
+  font-size: 20px;
+  width: left;
 }

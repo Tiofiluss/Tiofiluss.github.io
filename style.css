@@ -256,7 +256,7 @@ header.navigation a:hover {
   width: 80vw;
   text-align: center;
   margin-top: 40px;
-  top: 350px;
+  top: 300px;
 }
 
 #about p {
@@ -268,7 +268,7 @@ header.navigation a:hover {
   text-align: center;
   padding: 0;
   align-items: center;
-  top: 351px;
+  top: 301px;
 }
 .info-btn:hover {
   background: #ffffff;

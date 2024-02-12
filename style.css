@@ -62,8 +62,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  background-color: #000;
   background-size: cover;
   background-position: center;
 }
@@ -83,8 +82,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #0093e9;
-  background-image: linear-gradient(20deg, #0093e9 0%, #80d0c7 100%);
+  background-color: #000;
   background-size: cover;
   background-position: center;
 }
@@ -130,7 +128,7 @@ header {
 
 header .logo {
   position: relative;
-  color: #000;
+  color: #fff;
   font-size: 30px;
   text-decoration: none;
   text-transform: uppercase;
@@ -139,7 +137,7 @@ header .logo {
 }
 
 header .navigation a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 1 px;
@@ -165,7 +163,7 @@ nav a {
 }
 
 .navigation a.active {
-  color: #00ffba;
+  color: #9c9c9c;
 }
 
 header .navigation a:not(:last-child) {
@@ -221,13 +219,14 @@ header.navigation a:hover {
   text-align: center;
   width: 80vw;
   position: relative;
+  color: #fff;
 }
 
 .content .info-btn {
   color: #fff;
   margin: 0 auto;
   text-align: center;
-  background: #2a66f1;
+  background: #716c6c;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -272,7 +271,7 @@ header.navigation a:hover {
 }
 .info-btn:hover {
   background: #ffffff;
-  color: #333;
+  color: #716c6c;
 }
 
 .media-icons {
@@ -284,7 +283,7 @@ header.navigation a:hover {
 
 .media-icons a {
   position: relative;
-  color: #111;
+  color: #fff;
   font-size: 25px;
   transition: 0.3s;
   transition-property: transform;
@@ -357,7 +356,7 @@ label .close-btn {
 #check:checked ~ header .navigation {
   z-index: 2;
   position: fixed;
-  background: rgba(23, 130, 136, 0.9);
+  background-color: #807c7c;
   top: 0;
   bottom: 0;
   left: 0;

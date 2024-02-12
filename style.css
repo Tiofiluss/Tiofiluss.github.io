@@ -440,11 +440,13 @@ header .logo {
   #about h2 {
     font-size: 45px;
     line-height: 50px;
+    top: 150px;
   }
 
   #about p {
     font-size: 14px;
     text-align: center;
+    top: 151px;
   }
 }
 

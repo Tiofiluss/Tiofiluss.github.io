@@ -535,3 +535,13 @@ header .logo {
   font-size: 20px;
   width: left;
 }
+
+@media (max-width: 360px) {
+  #about h2 {
+    top: 200px;
+  }
+
+  #about p {
+    top: 201px;
+  }
+}
